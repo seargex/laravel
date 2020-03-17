@@ -16,7 +16,7 @@ spec:
       spec:
              containers:
                  - name: laravel
-                   image: ikhsannugs/laravel:$$BUILD_NUMBER
+                   image: ikhsannugs/laravel:$BUILD_NUMBER
                    ports:
                      - name: http
                        containerPort: 8000
