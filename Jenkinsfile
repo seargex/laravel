@@ -1,7 +1,8 @@
 env.DOCKER_REGISTRY = 'ikhsannugs'
 env.DOCKER_IMAGE_NAME = 'laravel'
-node('master') {
-    stage('Git Pull') {
+pipeline {
+    agent any {
+      stage('Git Pull') {
           checkout scm
     }
       stage('Build Docker Image') {
@@ -17,4 +18,4 @@ node('master') {
     }
     
 }
-
+}
