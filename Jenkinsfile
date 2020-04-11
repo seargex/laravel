@@ -7,6 +7,7 @@ pipeline {
         steps{
           sh "ls"
           sh "git --version"
+          echo "Deployment TO ${env.BRANCH_NAME}" 
         }
       }
       stage('Build Docker Image') {
