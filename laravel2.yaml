@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
    name: laravel-deployment
+   namespace: $BRANCH_NAME
    labels:
       app: laravel
 spec:
@@ -16,7 +17,7 @@ spec:
       spec:
              containers:
                  - name: laravel
-                   image: ikhsannugs/laravel:versi
+                   image: ikhsannugs/laravel-$BRANCH-NAME:versi
                    ports:
                      - name: http
                        containerPort: 8000
