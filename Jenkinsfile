@@ -2,6 +2,7 @@ env.DOCKER_REGISTRY = 'ikhsannugs'
 env.DOCKER_IMAGE_NAME = 'laravel'
 env.USERNAME = 'ikhsan-devops'
 env.SERVER = '34.124.209.30'
+env.BRANCH_NAME = 'master'
 pipeline {
   agent any 
     stages {
