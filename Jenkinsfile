@@ -9,7 +9,7 @@ pipeline {
         steps{
           sh "ls"
           sh "git --version"
-          echo "Deployment TO ${env.BRANCH_NAME}" 
+          echo "Deployment TO ${BRANCH_NAME}" 
         }
       }
       stage('Build Docker Image') {
