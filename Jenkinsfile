@@ -26,6 +26,8 @@ pipeline {
         steps{
           sshagent(credentials:['ssh-server-tujuan']){
             sh "ssh  -o StrictHostKeyChecking=no  $USERNAME@$SERVER docker container run -d -p --name $DOCKER_IMAGE_NAME $DOCKER_REGISTRY/$DOCKER_IMAGE_NAME-$BRANCH_NAME:${BUILD_NUMBER}"
+        
+          }
         }
       }
     }
